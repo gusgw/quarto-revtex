@@ -26,6 +26,7 @@ contributes:
       # Content to add in header that your format is using
       header-includes: |
         \usepackage{orcidlink}
+      template: template.tex
       template-partials:
         # Add here the partials your format is using
         - "partials/title.tex"
