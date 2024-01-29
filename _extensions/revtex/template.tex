@@ -10,6 +10,22 @@ $endif$
 %
 $doc-class.tex()$
 
+% Some packages are incompatible with REVTeX, we disable them here
+% following https://tex.stackexchange.com/questions/39415/unload-a-latex-package
+\makeatletter
+\newcommand{\disablepackage}[2]{%
+  \disable@package@load{#1}{#2}%
+}
+\newcommand{\reenablepackage}[1]{%
+  \reenable@package@load{#1}%
+}
+\makeatother
+
+% Disable packages
+\disablepackage{multicol}{}
+\disablepackage{caption}{}
+\disablepackage{subcaption}{}
+
 $if(beamer)$
 $if(background-image)$
 \usebackgroundtemplate{%
@@ -119,7 +135,7 @@ $-- User font settings (must come after default font and Beamer theme)
 $if(fontfamily)$
 \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
 $endif$
-\ifPDFTeX\else  
+\ifPDFTeX\else
     % xetex/luatex font selection
 $if(mainfont)$
   \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
@@ -148,7 +164,7 @@ $if(CJKmainfont)$
   \ifXeTeX
     \usepackage{xeCJK}
     \setCJKmainfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
-    $if(CJKsansfont)$
+$if(CJKsansfont)$
       \setCJKsansfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKsansfont$}
     $endif$
     $if(CJKmonofont)$
@@ -245,7 +261,7 @@ $if(CJKmainfont)$
   \usepackage{xeCJKfntef}
   \renewcommand{\st}[1]{\sout{#1}}
 \fi
-$endif$  
+$endif$
 \fi
 $endif$
 \setlength{\emergencystretch}{3em} % prevent overfull lines
