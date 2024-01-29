@@ -18,5 +18,25 @@ $if(subtitle)$
 \makeatother
 \subtitle{$subtitle$}
 $endif$
-\author{${ by-author:_authors.tex()[\and ] }}
+% Start AUTHORS
+$for(by-author)$
+  \author{$by-author.name.literal$}
+  $if(by-author.email)$
+    \email[E-mail: ]{$by-author.email$}
+  $endif$
+  $if(by-author.url)$
+    \email[Visit: ]{$by-author.url$}
+  $endif$
+  $if(by-author.acknowledgements)$
+    \thanks{$by-author.acknowledgements$}
+  $endif$
+  $if(by-author.affiliations)$
+    $for(by-author.affiliations)$
+      \affiliation{$by-author.affiliations.name$}
+    $endfor$
+    $else$
+    \noaffiliation
+  $endif$
+$endfor$
+% End AUTHORS
 \date{$date$}
