@@ -162,14 +162,6 @@ m_pois <- glm(Days ~ (Eth + Sex + Age + Lrn)^2, data = quine, family = poisson)
 summary(m_pois)
 ```
 
-### Text color {#sec-summary}
-
-Our format makes applying color on inline text possible using the `[content]{color=<name>}` syntax. Let's see an example.
-
-Here we are using a special feature of our format which is the coloring because [pink is a **nice** color]{color=mypink}.
-
-This is possible thanks to the Lua Filter included in the custom extension format.
-
 ### Using references {.unnumbered}
 
 I did not read this book [@CameronTrivedi2013] but it must be interesting. 
