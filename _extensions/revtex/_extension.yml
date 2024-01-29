@@ -30,3 +30,4 @@ contributes:
       template-partials:
         # Add here the partials your format is using
         - "partials/title.tex"
+        - "partials/before-body.tex"
