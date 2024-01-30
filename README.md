@@ -43,4 +43,9 @@ You can view a preview of the rendered template at < ... >.
 
 ## Format Options
 
-This format does not have specific format options.
+You can specify the following REVTeX options:
+
+`society`: The society style, either `aip` or `aps`
+`journal-style`: The journal style, such as `prl` or
+`layout`: The layout, either `preprint` or `reprint`
+`address-layout`: The address layout, either `grouped` or `superscript`.

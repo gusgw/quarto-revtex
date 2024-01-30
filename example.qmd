@@ -2,7 +2,11 @@
 title: "Demo REVTeX format to use as template"
 format:
   revtex-pdf:
-    keep-tex: true  
+    keep-tex: true
+    society: aps
+    journal-style: pre
+    layout: preprint
+    address-layout: superscript
 author:
   - name: John Doe
     affiliations:
@@ -23,7 +27,7 @@ abstract: |
   This document is only a demo explaining how to use the template.
 keywords: [template, demo]
 reference-section-title: References
-bibliography: bibliography.bib  
+bibliography: bibliography.bib
 ---
 
 ## Introduction {#sec-intro}
