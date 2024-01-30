@@ -20,7 +20,9 @@ $if(subtitle)$
 $endif$
 % Start AUTHORS
 $for(by-author)$
-  \author{$by-author.name.literal$}
+  \author{$by-author.name.literal$ $if(by-author.orcid)$
+  \,\orcidlink{$by-author.orcid$}
+  $endif$}
   $if(by-author.email)$
     \email[E-mail: ]{$by-author.email$}
   $endif$
