@@ -3,10 +3,11 @@ title: "Demo REVTeX format to use as template"
 format:
   revtex-pdf:
     keep-tex: true
-    society: aps
-    journal-style: pre
-    layout: preprint
-    address-layout: superscript
+    classoption:
+      - aps
+      - pre
+      - reprint
+      - superscriptaddress
 author:
   - name: John Doe
     affiliations:
