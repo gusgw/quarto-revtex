@@ -14,11 +14,19 @@ contributes:
       urlcolor: red
       fig-width: 6.5
       fig-height: 4.5
-      # Set this below (`biblio-config: false`) if your cls already load a bst file
-      biblio-config: false
+      cite-method: natbib
       # Content to add in header that your format is using
       header-includes: |
         \usepackage{orcidlink}
+      classoption:
+        - longbibliography
+        - nofootinbib
+        - nobibnotes
+        - amsmath
+        - amssymb
+        - floatfix
+        - citeautoscript
+        - author-year
       template: template.tex
       template-partials:
         # Add here the partials your format is using
