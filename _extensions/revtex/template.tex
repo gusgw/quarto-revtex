@@ -22,9 +22,10 @@ $doc-class.tex()$
 \makeatother
 
 % Disable packages
-\disablepackage{multicol}{}
-\disablepackage{caption}{}
-\disablepackage{subcaption}{}
+$for(disable-package)$
+\disablepackage{$disable-package$}{}
+$endfor$
+
 
 \usepackage{amsmath,amssymb}
 $if(linestretch)$
