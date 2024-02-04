@@ -18,6 +18,9 @@ $if(subtitle)$
 \makeatother
 \subtitle{$subtitle$}
 $endif$
+$if(keywords)$
+\keywords{$for(keywords)$$keywords$$sep$; $endfor$}
+$endif$
 % Start AUTHORS
 $for(by-author)$
   \author{$by-author.name.literal$ $if(by-author.orcid)$

@@ -32,6 +32,7 @@ contributes:
         # Add here the partials your format is using
         - "partials/title.tex"
         - "partials/before-body.tex"
+        - "partials/doc-class.tex"
       disable-package:
         - multicol
         - caption
